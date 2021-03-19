@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-buttons slot="end">
+      <ion-button [routerLink] = "['/sleepiness']">
+        <ion-icon color = "primary" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Sleepines logs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-card>
+    </ion-card>
+    <ion-card *ngFor="let sArray of sleepinessArray">
+        <ion-card-content>
+          <p>{{sArray.dateStringO()}}</p>
+          <p>{{sArray.summaryString()}}</p>
+        </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

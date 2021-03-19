@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary" style = "text-align: center;">
+      <ion-button [routerLink] = "['/overnight']">
+        <ion-icon name="add-circle-outline" color = "primary" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+    </ion-buttons>
+    <ion-title color = "White">Overnight Logs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let oArray of overArray">
+        <ion-card-content>
+          <p>{{oArray.dateString()}}</p>
+          <p>{{oArray.summaryString()}}</p>
+        </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

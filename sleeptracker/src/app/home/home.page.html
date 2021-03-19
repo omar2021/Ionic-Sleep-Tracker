@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:White;font-size:20px;font-family:cursive;">
+      Sleep Tracker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- logs page is where we start and set overnight sleep -->
+  <div class="container">
+      <ion-button [routerLink] = "['/overnight']"
+      color = "secondary" expand="block" shape="round"
+      fill="outline" size="large" strong>Log overnight</ion-button>
+      <p></p>
+      <br>
+      <ion-button expand="block" [routerLink] = "['/sleepiness']"
+      color = "light" shape="round"
+      fill="outline" size="large" strong>Log Sleepiness</ion-button>
+  </div>
+
+</ion-content>

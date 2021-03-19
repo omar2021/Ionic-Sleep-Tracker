@@ -1,0 +1,44 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+    <ion-title color = "primary">Log sleepiness</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- February 18, 2021 01:03:00 -->
+    <!-- (ionChange)="dateChanged($event)" -->
+    <ion-list-header> <h6>Enter sleepy time...</h6></ion-list-header>
+    <ion-item>
+      <ion-label color="primary">Date</ion-label>
+      <ion-datetime placeholder = "M/D/YY Hr:Min"
+      displayFormat = "MMM D, YY H:mm" min="2020" max="2040"
+      [(ngModel)] = "sleepinessDate"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header> <h6>Enter Sleepiness Rating </h6></ion-list-header>
+    <ion-item>
+      <ion-label color="primary" size="medium">Rating</ion-label>
+      <ion-select value="blonde" okText="OK" cancelText="Cancel" [(ngModel)] = "rating">
+        <ion-select-option value="1">Feeling active</ion-select-option>
+        <ion-select-option value="2">Functioning at high levels</ion-select-option>
+        <ion-select-option value="3">Awake, but relaxed</ion-select-option>
+        <ion-select-option value="4">Somewhat foggy</ion-select-option>
+        <ion-select-option value="5">Foggy</ion-select-option>
+        <ion-select-option value="6">Sleepy</ion-select-option>
+        <ion-select-option value="7">No longer fighting sleep</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br><br>
+    <ion-button expand="block" shape="round" (click)="addSleepiness()" [routerLink] = "['/logs']">
+      Add Sleepiness
+    </ion-button>
+
+  </ion-list>
+
+</ion-content>

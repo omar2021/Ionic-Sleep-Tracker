@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-router-outlet>
+
+  </ion-router-outlet>
+
+  <ion-tabs>
+    <!-- Tabs here so user can see the tabs in all pages -->
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button tab="home" [routerLink] = "['/home']">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+
+      <ion-tab-button tab="logov" [routerLink] = "['/logov']">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-label>Sleep Reports</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="logs" [routerLink] = "['/logs']">
+        <ion-icon name="sunny-outline"></ion-icon>
+        <ion-label>Sleepy</ion-label>
+
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-app>

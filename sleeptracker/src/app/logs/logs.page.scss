@@ -1,0 +1,21 @@
+ion-toolbar {
+  --ion-toolbar-background: transparent !important;
+}
+
+ion-list{
+  background: transparent;
+}
+ion-item, ion-card{
+  background: transparent;
+}
+
+ion-card-content{
+  color: azure;
+  text-align: center;
+  padding: auto;
+
+}
+
+ion-content{
+  --background: url(../../assets/images/stars.jpg) no-repeat center/cover fixed;
+}
